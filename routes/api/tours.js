@@ -4,10 +4,10 @@ const modelTour = require('../../models/tour');
 
 // http://localhost:3000/api/tours
 router.get('/', (req, res) => {
-    // res.send('API TOURS')
-    modelTour.getAll((err, rows) => {
-    res.json(rows)    
-    })
+    res.send('API TOURS')
+    // modelTour.getAll((err, rows) => {
+    // res.json(rows)    
+    // })
 })
 
 //POST // http://localhost:3000/api/tours/resultado-busqueda
