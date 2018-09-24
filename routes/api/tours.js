@@ -12,13 +12,23 @@ router.get('/', (req, res) => {
 })
 
 //POST // http://localhost:3000/api/tours/resultado-busqueda
-router.post('/resultado-busqueda', (req, res) => {
+// router.post('/resultado-busqueda', (req, res) => {
+//     console.log(req.body.categoria)
+//     console.log(req.body.ciudad)
+//     // res.send('HASTA AQUI LLEGA EL POST')
+//     modelTour.getByCiudadCat(req.body.ciudad, req.body.categoria, (err, rows) => {
+//         res.json(rows)
+//     })
+// })
+
+//POST // http://localhost:3000/api/tours/resultado-busqueda/ciudad/categoria
+router.post('/resultado-busqueda/:ciudad/:categoria', (req, res) => {
     console.log(req.body.categoria)
     console.log(req.body.ciudad)
-    res.send('termina')
-    // modelTour.send(req, (err, result) => {
-    //     res.json()
-    // })
+    // res.send('HASTA AQUI LLEGA EL POST')
+    modelTour.getByCiudadCat(req.body.ciudad, req.body.categoria, (err, rows) => {
+        res.json(rows)
+    })
 })
 
 //POST // http://localhost:3000/api/tours/create
@@ -30,7 +40,7 @@ router.post('/create', (req, res) => {
     })
 })
 
-// http://localhost:3000/api/tours/4
+http://localhost:3000/api/tours/4
 router.get('/:idTour', (req, res) => {
     // console.log(req.params.idTour)
     // res.send('aqui')

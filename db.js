@@ -6,31 +6,31 @@ let pool = null
 
 //CON EXPORT PUEDO ACCDER A ESTAS FUNCIONES DESDE AFUERA 
 //ESTA ES MI BBDD LOCAL
-        // exports.connect = (done) => {
-        //     pool = mysql.createPool({
-        //     host: 'localhost',
-        //     user: 'root',
-        //     password: 'root',
-        //     database: 'toknow',
-        //     port:8889
-        //     })
-        //     done()
-        // }
+        exports.connect = (done) => {
+            pool = mysql.createPool({
+            host: 'localhost',
+            user: 'root',
+            password: 'root',
+            database: 'toknow',
+            port:8889
+            })
+            done()
+        }
        
 // mysql://b013c55e46180b:0d13b9b6@eu-cdbr-west-02.cleardb.net/heroku_f71146009388978?reconnect=true
 
 
 //ESTA ES MI BBDD PROVICIONAL EN HEROKU MIA
-exports.connect = (done) => {
-    pool = mysql.createPool({
-    host: 'eu-cdbr-west-02.cleardb.net',
-    user: 'b013c55e46180b',
-    password: '0d13b9b6',
-    database: 'heroku_f71146009388978',
-    port:3306
-    })
-    done()
-}
+// exports.connect = (done) => {
+//     pool = mysql.createPool({
+//     host: 'eu-cdbr-west-02.cleardb.net',
+//     user: 'b013c55e46180b',
+//     password: '0d13b9b6',
+//     database: 'heroku_f71146009388978',
+//     port:3306
+//     })
+//     done()
+// }
 
 
 //ESTA ES MI BBDD PROVICIONAL EN HEROKU MARIO

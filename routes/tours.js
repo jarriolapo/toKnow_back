@@ -3,7 +3,7 @@ var router = express.Router();
 const modelTour = require('../models/tour');
 
 
-//DEVUELVE BUSQUEDA TOURS POR CIUDAD Y CATEGORIA
+//DEVUELVE BUSQUEDA TOURS POR CIUDAD (//Y CATEGORIA//)
 router.post('/resultado-busqueda', (req, res) => {
     // req.body recibe los parametros a la peticion POST
     // req.param recibe los parametros  dimanicoas de la URL /:id
